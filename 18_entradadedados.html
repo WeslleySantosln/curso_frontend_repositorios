@@ -1,0 +1,194 @@
+<!doctype html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="WeslleySantosln">
+        <meta name="description" content="lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+        
+        <style>
+            body{
+                background-color: #000;
+                color:#fff;
+            }
+
+            #firstField, #secondField, #thirdField{
+                
+                margin-inline: 25%;
+                margin-top: 10%;
+                margin-right: 54%;
+            }
+
+            label,input{
+                display: block;
+                width: 200px;
+                box-sizing: border-box;
+            }
+
+            label{
+                margin-top: 10px;
+            
+            }
+            input{
+                margin-bottom: 2.5px;
+            }
+
+            .radio, #sexoF,#sexoM{
+                display: inline;
+                width: auto;
+                
+            }
+           
+           
+            #estado, .select{
+                display: inline;
+                width: auto;
+              
+            }
+
+            #estado{
+                
+                display: inline-block;
+                margin-bottom: 7px;
+                margin-top: 7px;
+            }
+
+            #secondField {
+                margin-top: 20px;
+            }
+
+            #secondField label{
+                display: inline-flex;
+                margin-bottom: 7px;
+                margin-top: 7px;;
+            }
+            #secondField label input{
+                display: inline;
+                width: auto;
+            }
+            
+            #thirdField{
+                margin-inline: 25%;
+                margin-top: 20px;
+                margin-right: 100%;
+                
+            }
+
+            textarea{
+                resize: none;
+                
+            }
+
+            #termos, #termos input{
+                display: inline-block;
+                width: auto;
+                margin-bottom: 7px;
+                margin-top: 7px;;
+                
+            }
+
+            
+            #btnEnviar{
+                margin-inline: 25%;
+                margin-top: 2%;
+                margin-right: 54%;         
+                
+
+            }
+
+            #curriculo{
+                width: 100%;
+                font-size: 11px;
+                box-sizing: border-box;
+            }
+
+        </style>
+    
+    </head>
+
+    <body>
+        
+        <h1>Exemplo de Formulario</h1>
+
+        <form action="#" method="POST" class="formLogin">
+            <fieldset id="firstField">
+                <legend>Dados Pessoais</legend>
+
+                <label form="email" >Email</label>
+                <input type="email" id="email" name="inpEmail" required
+                    placeholder="Digite seu e-mail">
+
+                <label form="nFilhos">Numero de filho</label>
+                <input type="number" min="0" max="1000" id="nFilhos" name="inpNFilhos" required>
+                
+                <label from="date">Data Nacimento</label>
+                <input type="date" min="1900-01-01" max="2023-01-01" id="date" name="inpDate">
+                
+                <p>Sexo:</p>
+
+                <label form="sexoM" class="radio">Masculino
+                    <input type="radio" id="sexoM" name="inpSexo" value="M">
+                </label>
+                
+                <label form="sexoF" class="radio">Feminino
+                    <input type="radio" id="sexoF" name="inpSexo" value="F">
+                </label>
+
+                <label form="estado" class="select">Estado</label>
+                <select name="slcEstado" id="estado">
+                    <option value="0">Selecione</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="BA">Bahia</option>
+                 </select>             
+                
+                 <label form="curriculo">curriculo:</label>
+                 <input type="file" id="curriculo" name="inpCurriulo">
+                 
+
+
+            </fieldset>
+
+            <fieldset id="secondField">
+                <legend>Área de interesse</legend>
+                
+                <label><input type="checkbox" name="inpHtml" value="HMTL">HTML</label>
+                
+
+
+                <label><input type="checkbox" name="inpCss" value="CSS">CSS</label>
+                
+
+
+                <label><input type="checkbox" name="inpJS" value="JS">JS</label>
+
+            
+            </fieldset>
+
+            <fieldset id="thirdField">
+                <legend>Mensagem</legend>
+
+                <textarea nome="textArea" cols="25" rows="5" readonly >Minions ipsum gelatooo uuu para tú bappleees para tú tank yuuu! Gelatooo and bananar!!!
+                </textarea>
+                <label id="termos"><input type="checkbox" name="inpTermos" value="true"
+                    form="termos">
+                    Li e aceito os termos</label>
+
+            </fieldset>
+
+            <input type="submit" value="Enviar(submit)" id="btnEnviar">
+            <input type="button" value="button" id="btnEnviar">
+            <input type="reset" value="reset" id="btnEnviar">
+        
+        </form>
+
+         
+
+
+        
+
+
+    </body>
+
+</html>
