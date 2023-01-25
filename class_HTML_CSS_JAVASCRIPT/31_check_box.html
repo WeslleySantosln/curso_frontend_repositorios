@@ -13,44 +13,82 @@
                 background: #000;
                 color: #fff;
                 font-family: sans-serif;
+                text-align: center;
+                margin-top: 100px;
             }
+
+            
 
             label{
                 margin-right: 25px;
             }
 
             .span-check{
-                 
+                display: inline-block;
+                width: 60px;
+                height: 30px;
+                background: #ccc;
+                border-radius: 15px;                
             }
+
+            .span-check:before{
+                content: "";
+                display: block;
+                background: red ;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                margin: 5px;
+                transition: all .3s ease-in-out;
+            }
+
+            .checkBox:checked + .span-check:before{
+                background: green;
+                margin-left: 60%;
+
+            }
+
+            .checkBox{
+                opacity: 0;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+
+            }
+
+            .checkBox:focus + .span-check{
+                box-shadow: 0 0 0 2px blue;
+            }
+
+
+
+
         </style>
     
     
     </head>
 
     <body>
-        <h1>Estrutura Basica</h1>
+        <h2>Quais os assunto que você desejar receber?</h2>
 
         <label>
-            <input type="checkbox">
+            <input type="checkbox" class="checkBox">
             <span class="span-check"></span>
             Esporte
         </label>
 
         <label>
-            <input type="checkbox">
+            <input type="checkbox" class="checkBox">
             <span class="span-check"></span>
-            Esporte
+            Politica
         </label>
 
         <label>
-            <input type="checkbox">
+            <input type="checkbox" class="checkBox">
             <span class="span-check"></span>
-            Esporte
+            Educação
         </label>
-
-        
-
-
+      
     </body>
 
 </html>
